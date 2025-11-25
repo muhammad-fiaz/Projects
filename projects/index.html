@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- SEO & Meta Tags -->
+        <title>Projects | Muhammad Fiaz - Open Source Software Portfolio</title>
+        <meta
+            name="description"
+            content="Explore the open-source portfolio of Muhammad Fiaz. Featuring full-stack web applications, mobile apps (Flutter), and software tools available on GitHub."
+        />
+        <meta
+            name="keywords"
+            content="Muhammad Fiaz, Software Engineer, Portfolio, Open Source, GitHub, Web Development, Flutter, JavaScript, Python, React, Developer Projects"
+        />
+        <meta name="author" content="Muhammad Fiaz" />
+        <meta name="robots" content="index, follow" />
+        <link
+            rel="canonical"
+            href="https://muhammad-fiaz.github.io/projects/"
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://muhammad-fiaz.github.io/projects/"
+        />
+        <meta
+            property="og:title"
+            content="Projects | Muhammad Fiaz - Open Source Software Portfolio"
+        />
+        <meta
+            property="og:description"
+            content="Explore the open-source portfolio of Muhammad Fiaz. Featuring full-stack web applications, mobile apps, and tools."
+        />
+        <meta
+            property="og:image"
+            content="https://avatars.githubusercontent.com/u/75434191?v=4"
+        />
+
+        <!-- Twitter / X -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+            property="twitter:url"
+            content="https://muhammad-fiaz.github.io/projects/"
+        />
+        <meta property="twitter:title" content="Projects | Muhammad Fiaz" />
+        <meta
+            property="twitter:description"
+            content="Explore the open-source portfolio of Muhammad Fiaz. Featuring full-stack web applications, mobile apps, and tools."
+        />
+        <meta
+            property="twitter:image"
+            content="https://avatars.githubusercontent.com/u/75434191?v=4"
+        />
+        <meta property="twitter:creator" content="@muhammadfiaz_" />
+
+        <!-- Static Schema.org (Person) -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "ProfilePage",
+                "mainEntity": {
+                    "@type": "Person",
+                    "name": "Muhammad Fiaz",
+                    "url": "https://muhammadfiaz.com",
+                    "sameAs": [
+                        "https://github.com/muhammad-fiaz",
+                        "https://linkedin.com/in/muhammad-fiaz"
+                    ],
+                    "jobTitle": "Software Engineer",
+                    "description": "Open source contributor and software developer specializing in full-stack web and mobile applications."
+                }
+            }
+        </script>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- jQuery -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Inter", "sans-serif"],
+                        },
+                        colors: {
+                            brand: {
+                                50: "#f0f9ff",
+                                500: "#0ea5e9",
+                                600: "#0284c7",
+                                900: "#0c4a6e",
+                            },
+                            neutral: {
+                                850: "#1f1f1f",
+                                900: "#171717",
+                                950: "#0a0a0a",
+                            },
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <!-- Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lucide@0.350.0/dist/umd/lucide.min.js"></script>
+
+        <style>
+            /* Custom Scrollbar */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #000000;
+            }
+            html:not(.dark) ::-webkit-scrollbar-track {
+                background: #f1f5f9;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #333333;
+                border-radius: 4px;
+            }
+            html:not(.dark) ::-webkit-scrollbar-thumb {
+                background: #cbd5e1;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555555;
+            }
+
+            /* Loader Styles */
+            #global-loader {
+                position: fixed;
+                inset: 0;
+                z-index: 9999;
+                background-color: #ffffff;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: opacity 0.5s ease-out;
+            }
+            html.dark #global-loader {
+                background-color: #000000;
+            }
+            .progress-container {
+                width: 200px;
+                height: 4px;
+                background-color: #e2e8f0;
+                border-radius: 2px;
+                overflow: hidden;
+                margin-top: 20px;
+            }
+            html.dark .progress-container {
+                background-color: #333;
+            }
+            .progress-bar {
+                height: 100%;
+                background-color: #0ea5e9;
+                width: 0%;
+                transition: width 0.2s ease-out;
+            }
+            /* Utility to ensure body scroll is unlocked */
+            body.loaded {
+                overflow-y: auto !important;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-slate-50 text-slate-900 dark:bg-black dark:text-neutral-200 transition-colors duration-300 min-h-screen flex flex-col relative overflow-hidden"
+    >
+        <!-- Global Loading Screen -->
+        <div id="global-loader">
+            <div class="flex flex-col items-center gap-4">
+                <!-- Rocket Icon for Loader -->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-brand-500 animate-bounce"
+                >
+                    <path
+                        d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
+                    />
+                    <path
+                        d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
+                    />
+                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.1 4-2 4-2" />
+                    <path d="M12 15v5s3.03-.55 4-2c1.1-1.62 2-4 2-4" />
+                </svg>
+
+                <p
+                    id="loading-text"
+                    class="text-sm font-medium text-slate-500 dark:text-neutral-500"
+                >
+                    Initializing...
+                </p>
+
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Failsafe Loader Script: Guarantees removal after 8s even if JS crashes -->
+        <script>
+            setTimeout(() => {
+                const loader = document.getElementById("global-loader");
+                if (loader && loader.style.display !== "none") {
+                    console.warn("Loader timeout failsafe triggered.");
+                    loader.style.opacity = "0";
+                    setTimeout(() => {
+                        loader.style.display = "none";
+                        document.body.classList.add("loaded");
+                        document.body.classList.remove("overflow-hidden");
+                    }, 500);
+                }
+            }, 8000);
+        </script>
+
+        <!-- Navigation -->
+        <nav
+            class="fixed w-full z-50 top-0 start-0 border-b border-slate-200 dark:border-neutral-800 bg-white/80 dark:bg-black/80 backdrop-blur-md"
+        >
+            <div
+                class="max-w-7xl mx-auto flex flex-wrap items-center justify-between mx-auto p-4"
+            >
+                <a
+                    href="https://muhammadfiaz.com"
+                    class="flex items-center space-x-3 rtl:space-x-reverse group"
+                >
+                    <div
+                        class="p-2 bg-brand-500 rounded-lg text-white group-hover:scale-105 transition-transform"
+                    >
+                        <!-- Rocket Logo -->
+                        <i data-lucide="rocket" class="w-6 h-6"></i>
+                    </div>
+                    <span
+                        class="self-center text-xl font-semibold whitespace-nowrap tracking-tight"
+                        >Muhammad Fiaz</span
+                    >
+                </a>
+                <div class="flex items-center space-x-2 md:space-x-4">
+                    <a
+                        href="https://github.com/muhammad-fiaz"
+                        target="_blank"
+                        class="text-slate-500 hover:text-slate-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
+                        aria-label="GitHub Profile"
+                    >
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                    <button
+                        id="theme-toggle"
+                        class="p-2 text-slate-500 rounded-lg hover:bg-slate-100 dark:text-neutral-400 dark:hover:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all"
+                        aria-label="Toggle Theme"
+                    >
+                        <i
+                            id="theme-icon"
+                            data-lucide="moon"
+                            class="w-5 h-5"
+                        ></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="pt-32 pb-12 px-6 text-center relative overflow-hidden">
+            <div
+                class="absolute inset-0 -z-10 opacity-30 blur-3xl"
+                aria-hidden="true"
+            >
+                <div
+                    class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#0ea5e9] to-[#8b5cf6] opacity-30"
+                    style="
+                        clip-path: polygon(
+                            74.1% 44.1%,
+                            100% 61.6%,
+                            97.5% 26.9%,
+                            85.5% 0.1%,
+                            80.7% 2%,
+                            72.5% 32.5%,
+                            60.2% 62.4%,
+                            52.4% 68.1%,
+                            47.5% 58.3%,
+                            45.2% 34.5%,
+                            27.5% 76.7%,
+                            0.1% 64.9%,
+                            17.9% 100%,
+                            27.6% 76.8%,
+                            76.1% 97.7%,
+                            74.1% 44.1%
+                        );
+                    "
+                ></div>
+            </div>
+
+            <h1
+                class="text-4xl md:text-5xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-neutral-400 hero-animate opacity-0 translate-y-4"
+            >
+                My Projects
+            </h1>
+            <p
+                class="text-lg md:text-xl text-slate-600 dark:text-neutral-400 max-w-2xl mx-auto hero-animate opacity-0 translate-y-4"
+            >
+                A collection of open-source tools and applications.
+            </p>
+        </header>
+
+        <!-- Main Content -->
+        <main
+            class="flex-grow max-w-7xl mx-auto px-6 pb-20 w-full relative z-10"
+        >
+            <!-- Controls & Search -->
+            <div
+                class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8 bg-white/50 dark:bg-neutral-900/50 p-4 rounded-2xl border border-slate-200 dark:border-neutral-800 backdrop-blur-sm shadow-sm"
+            >
+                <div class="w-full md:w-auto flex items-center gap-2">
+                    <span
+                        id="repo-count"
+                        class="text-sm font-medium text-slate-500 dark:text-neutral-400 whitespace-nowrap"
+                        >Loading...</span
+                    >
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <!-- Search Input -->
+                    <div class="relative w-full sm:w-64">
+                        <div
+                            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                        >
+                            <i
+                                data-lucide="search"
+                                class="w-4 h-4 text-slate-400 dark:text-neutral-500"
+                            ></i>
+                        </div>
+                        <input
+                            type="text"
+                            id="search-input"
+                            class="bg-white dark:bg-black border border-slate-200 dark:border-neutral-800 text-slate-900 dark:text-white text-sm rounded-lg focus:ring-brand-500 focus:border-brand-500 block w-full pl-10 p-2.5 placeholder-slate-400 dark:placeholder-neutral-500 transition-colors"
+                            placeholder="Search projects..."
+                        />
+                    </div>
+
+                    <!-- Filter Dropdown -->
+                    <div class="relative w-full sm:w-48">
+                        <div
+                            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                        >
+                            <i
+                                data-lucide="filter"
+                                class="w-4 h-4 text-slate-400 dark:text-neutral-500"
+                            ></i>
+                        </div>
+                        <select
+                            id="language-filter"
+                            class="bg-white dark:bg-black border border-slate-200 dark:border-neutral-800 text-slate-900 dark:text-white text-sm rounded-lg focus:ring-brand-500 focus:border-brand-500 block w-full pl-10 p-2.5 cursor-pointer transition-colors appearance-none"
+                        >
+                            <option value="All">All Languages</option>
+                            <!-- Options populated dynamically -->
+                        </select>
+                        <div
+                            class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
+                        >
+                            <i
+                                data-lucide="chevron-down"
+                                class="w-4 h-4 text-slate-400 dark:text-neutral-500"
+                            ></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid Container -->
+            <div
+                id="projects-grid"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 min-h-[400px]"
+            >
+                <!-- Content will be injected here -->
+            </div>
+
+            <!-- Pagination -->
+            <div
+                id="pagination"
+                class="flex justify-center items-center mt-12 space-x-4 hidden"
+            >
+                <button
+                    id="prev-btn"
+                    class="px-4 py-2 flex items-center gap-2 rounded-lg border border-slate-300 dark:border-neutral-700 hover:bg-slate-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                >
+                    <i data-lucide="chevron-left" class="w-4 h-4"></i> Previous
+                </button>
+                <span
+                    id="page-indicator"
+                    class="text-sm text-slate-600 dark:text-neutral-400"
+                    >Page 1</span
+                >
+                <button
+                    id="next-btn"
+                    class="px-4 py-2 flex items-center gap-2 rounded-lg border border-slate-300 dark:border-neutral-700 hover:bg-slate-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                >
+                    Next <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <!-- Error/Empty State -->
+            <div id="error-message" class="hidden text-center py-20">
+                <div
+                    class="inline-flex p-4 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 mb-4"
+                >
+                    <i data-lucide="alert-circle" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">No projects found</h3>
+                <p
+                    id="error-desc"
+                    class="text-slate-600 dark:text-neutral-400 max-w-md mx-auto"
+                >
+                    Try adjusting your search or filters.
+                </p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="border-t border-slate-200 dark:border-neutral-800 bg-white dark:bg-black py-8 mt-auto relative z-10"
+        >
+            <div
+                class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4"
+            >
+                <p class="text-slate-600 dark:text-neutral-500 text-sm">
+                    &copy; <span id="year"></span> Muhammad Fiaz.
+                </p>
+                <div class="flex space-x-6">
+                    <a
+                        href="https://muhammadfiaz.com"
+                        class="text-slate-500 hover:text-brand-500 transition-colors text-sm"
+                        >Portfolio</a
+                    >
+                    <a
+                        href="https://github.com/muhammad-fiaz"
+                        class="text-slate-500 hover:text-brand-500 transition-colors text-sm"
+                        >GitHub</a
+                    >
+                </div>
+            </div>
+        </footer>
+
+        <!-- Logic -->
+        <script>
+            // --- Safe Loader Removal (Vanilla JS) ---
+            function safeRemoveLoader() {
+                const loader = document.getElementById("global-loader");
+                if (loader && loader.style.display !== "none") {
+                    loader.style.opacity = "0";
+                    setTimeout(() => {
+                        loader.style.display = "none";
+                        document.body.classList.remove("overflow-hidden");
+                        document.body.classList.add("loaded");
+                        // Trigger animations
+                        if (typeof gsap !== "undefined") {
+                            gsap.to(".hero-animate", {
+                                opacity: 1,
+                                y: 0,
+                                duration: 1,
+                                stagger: 0.2,
+                                ease: "power3.out",
+                            });
+                        }
+                    }, 500);
+                }
+            }
+
+            $(document).ready(function () {
+                // --- Progress Bar Logic ---
+                const $progressBar = $("#progress-bar");
+                const $loadingText = $("#loading-text");
+                let loadProgress = 0;
+                let loadInterval;
+
+                function startProgressBar() {
+                    loadProgress = 0;
+                    $progressBar.css("width", "0%");
+                    loadInterval = setInterval(() => {
+                        if (loadProgress < 90) {
+                            loadProgress += Math.random() * 10;
+                            $progressBar.css("width", `${loadProgress}%`);
+                        }
+                    }, 200);
+                }
+
+                startProgressBar();
+
+                function finishProgressBar() {
+                    clearInterval(loadInterval);
+                    $progressBar.css("width", "100%");
+                    $loadingText.text("Ready!");
+                    setTimeout(safeRemoveLoader, 500);
+                }
+
+                // --- Configuration ---
+                const USERNAME = "muhammad-fiaz";
+                const ITEMS_PER_PAGE = 9;
+                const FETCH_LIMIT = 100;
+                const COLORS_URL =
+                    "https://raw.githubusercontent.com/ozh/github-colors/master/colors.json";
+
+                let allFetchedRepos = [];
+                let languageColors = {};
+                let filteredRepos = [];
+                let currentPage = 1;
+
+                // --- IndexedDB Configuration ---
+                const DB_NAME = "FiazProjects";
+                const DB_VERSION = 2;
+                const STORE_NAME = "projects_cache";
+                const CACHE_DURATION = 3600 * 1000; // 1 Hour in ms
+
+                // --- Theme Management ---
+                const $html = $("html");
+                const $themeIcon = $("#theme-icon");
+
+                function updateThemeIcon(isDark) {
+                    if (typeof lucide !== "undefined") {
+                        $themeIcon.attr("data-lucide", isDark ? "sun" : "moon");
+                        lucide.createIcons();
+                    }
+                }
+
+                function initTheme() {
+                    try {
+                        const isDark =
+                            localStorage.theme === "dark" ||
+                            (!("theme" in localStorage) &&
+                                window.matchMedia(
+                                    "(prefers-color-scheme: dark)",
+                                ).matches);
+                        if (isDark) $html.addClass("dark");
+                        else $html.removeClass("dark");
+                        updateThemeIcon(isDark);
+                    } catch (e) {
+                        console.error("Theme init error", e);
+                    }
+                }
+
+                $("#theme-toggle").on("click", function () {
+                    $html.toggleClass("dark");
+                    const isDark = $html.hasClass("dark");
+                    localStorage.setItem("theme", isDark ? "dark" : "light");
+                    updateThemeIcon(isDark);
+                });
+
+                initTheme();
+                $("#year").text(new Date().getFullYear());
+
+                // --- IndexedDB Helper Class ---
+                const IDBManager = {
+                    open: function () {
+                        return new Promise((resolve, reject) => {
+                            try {
+                                const request = indexedDB.open(
+                                    DB_NAME,
+                                    DB_VERSION,
+                                );
+                                request.onerror = (e) => reject(e);
+                                request.onsuccess = (e) =>
+                                    resolve(e.target.result);
+                                request.onupgradeneeded = (e) => {
+                                    const db = e.target.result;
+                                    if (
+                                        !db.objectStoreNames.contains(
+                                            STORE_NAME,
+                                        )
+                                    ) {
+                                        db.createObjectStore(STORE_NAME, {
+                                            keyPath: "id",
+                                        });
+                                    }
+                                };
+                            } catch (e) {
+                                reject(e); // Handle environments where IDB is restricted
+                            }
+                        });
+                    },
+                    save: async function (key, data) {
+                        try {
+                            const db = await this.open();
+                            return new Promise((resolve, reject) => {
+                                try {
+                                    const tx = db.transaction(
+                                        STORE_NAME,
+                                        "readwrite",
+                                    );
+                                    const store = tx.objectStore(STORE_NAME);
+                                    const record = {
+                                        id: key,
+                                        data: data,
+                                        timestamp: Date.now(),
+                                    };
+                                    store.put(record);
+                                    tx.oncomplete = () => resolve();
+                                    tx.onerror = () => reject(tx.error);
+                                } catch (e) {
+                                    resolve();
+                                }
+                            });
+                        } catch (e) {
+                            return;
+                        }
+                    },
+                    get: async function (key) {
+                        try {
+                            const db = await this.open();
+                            return new Promise((resolve, reject) => {
+                                try {
+                                    const tx = db.transaction(
+                                        STORE_NAME,
+                                        "readonly",
+                                    );
+                                    const store = tx.objectStore(STORE_NAME);
+                                    const request = store.get(key);
+                                    request.onsuccess = () =>
+                                        resolve(request.result);
+                                    request.onerror = () => resolve(null);
+                                } catch (e) {
+                                    resolve(null);
+                                }
+                            });
+                        } catch (e) {
+                            return null;
+                        }
+                    },
+                };
+
+                // --- Dynamic Schema Generation (jQuery) ---
+                function generateSchemas(repos) {
+                    $("#dynamic-schema").remove();
+                    if (!repos) return;
+
+                    const schemaData = {
+                        "@context": "https://schema.org",
+                        "@type": "ItemList",
+                        itemListElement: repos.map((repo, index) => ({
+                            "@type": "ListItem",
+                            position: index + 1,
+                            item: {
+                                "@type": "SoftwareSourceCode",
+                                name: repo.name.replace(/-/g, " "),
+                                description: repo.description
+                                    ? repo.description
+                                    : `Open source project: ${repo.name}`,
+                                programmingLanguage: repo.language || "Various",
+                                codeRepository: repo.html_url,
+                                url: repo.html_url,
+                                author: {
+                                    "@type": "Person",
+                                    name: "Muhammad Fiaz",
+                                    url: "https://muhammadfiaz.com",
+                                },
+                                dateModified: repo.updated_at,
+                                dateCreated: repo.created_at,
+                            },
+                        })),
+                    };
+
+                    $("<script>")
+                        .attr("id", "dynamic-schema")
+                        .attr("type", "application/ld+json")
+                        .text(JSON.stringify(schemaData))
+                        .appendTo("head");
+                }
+
+                // --- Data Fetching Logic ---
+                function getSkeletonHTML() {
+                    let html = "";
+                    for (let i = 0; i < 6; i++) {
+                        html += `
+                    <div class="bg-white dark:bg-neutral-900 rounded-2xl border border-slate-200 dark:border-neutral-800 h-[400px] animate-pulse flex flex-col overflow-hidden">
+                        <div class="h-48 bg-slate-200 dark:bg-neutral-800 w-full"></div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex justify-between mb-4">
+                                <div class="h-8 w-8 bg-slate-200 dark:bg-neutral-800 rounded-lg"></div>
+                                <div class="h-8 w-16 bg-slate-200 dark:bg-neutral-800 rounded-lg"></div>
+                            </div>
+                            <div class="h-6 bg-slate-200 dark:bg-neutral-800 rounded w-3/4 mb-3"></div>
+                            <div class="h-4 bg-slate-200 dark:bg-neutral-800 rounded w-full mb-2"></div>
+                            <div class="h-4 bg-slate-200 dark:bg-neutral-800 rounded w-2/3 mb-auto"></div>
+                        </div>
+                    </div>`;
+                    }
+                    return html;
+                }
+
+                // Helper: Fetch with Timeout
+                async function fetchWithTimeout(resource, options = {}) {
+                    const { timeout = 5000 } = options;
+
+                    const controller = new AbortController();
+                    const id = setTimeout(() => controller.abort(), timeout);
+
+                    try {
+                        const response = await fetch(resource, {
+                            ...options,
+                            signal: controller.signal,
+                        });
+                        clearTimeout(id);
+                        return response;
+                    } catch (error) {
+                        clearTimeout(id);
+                        throw error;
+                    }
+                }
+
+                async function initData() {
+                    const $grid = $("#projects-grid");
+                    const $errorMsg = $("#error-message");
+                    const $errorDesc = $("#error-desc");
+                    const $countLabel = $("#repo-count");
+
+                    $grid.html(getSkeletonHTML());
+                    $errorMsg.addClass("hidden");
+                    $loadingText.text("Checking Cache...");
+
+                    try {
+                        // Parallel Fetch Logic with Promise.allSettled
+                        const repoPromise = IDBManager.get("repos_v1");
+                        const colorPromise = IDBManager.get("colors_v1");
+
+                        const [repoResult, colorResult] =
+                            await Promise.allSettled([
+                                repoPromise,
+                                colorPromise,
+                            ]);
+                        const cachedRepos =
+                            repoResult.status === "fulfilled"
+                                ? repoResult.value
+                                : null;
+                        const cachedColors =
+                            colorResult.status === "fulfilled"
+                                ? colorResult.value
+                                : null;
+
+                        // 1. COLORS
+                        if (
+                            cachedColors &&
+                            Date.now() - cachedColors.timestamp < CACHE_DURATION
+                        ) {
+                            languageColors = cachedColors.data;
+                        } else {
+                            $loadingText.text("Fetching Colors...");
+                            try {
+                                const colorRes = await fetchWithTimeout(
+                                    COLORS_URL,
+                                    { timeout: 3000 },
+                                );
+                                if (colorRes.ok) {
+                                    languageColors = await colorRes.json();
+                                    await IDBManager.save(
+                                        "colors_v1",
+                                        languageColors,
+                                    );
+                                }
+                            } catch (e) {
+                                console.warn(
+                                    "Color fetch failed/timed out, using defaults",
+                                );
+                            }
+                        }
+
+                        // 2. REPOS
+                        if (
+                            cachedRepos &&
+                            Date.now() - cachedRepos.timestamp < CACHE_DURATION
+                        ) {
+                            console.log("Loading Repos from IndexedDB Cache");
+                            $loadingText.text("Loading Projects...");
+                            processData(cachedRepos.data);
+                        } else {
+                            console.log(
+                                "Cache expired or missing. Fetching from API...",
+                            );
+                            $loadingText.text("Fetching from GitHub...");
+
+                            // Fetch with strict 5s timeout to prevent hanging
+                            const response = await fetchWithTimeout(
+                                `https://api.github.com/users/${USERNAME}/repos?sort=updated&direction=desc&per_page=${FETCH_LIMIT}`,
+                                { timeout: 5000 },
+                            );
+
+                            if (!response.ok)
+                                throw new Error(
+                                    `GitHub API Error: ${response.status}`,
+                                );
+
+                            const repos = await response.json();
+                            await IDBManager.save("repos_v1", repos);
+                            processData(repos);
+                        }
+                    } catch (error) {
+                        console.error("Main Init Error:", error);
+                        $grid.empty();
+                        $errorMsg.removeClass("hidden");
+                        $errorDesc.text(
+                            "Could not connect to GitHub API. Please check your connection or try again later.",
+                        );
+                        $countLabel.text("Error");
+                    } finally {
+                        // ALWAYS REMOVE LOADER
+                        finishProgressBar();
+                    }
+                }
+
+                function processData(repos) {
+                    if (!repos || repos.length === 0) {
+                        $("#repo-count").text("No repositories found.");
+                        $("#projects-grid").empty();
+                        $("#error-message").removeClass("hidden");
+                        $("#error-desc").text(
+                            "No repositories found for this user.",
+                        );
+                    } else {
+                        allFetchedRepos = repos;
+                        try {
+                            generateSchemas(repos);
+                            populateLanguageFilter(repos);
+                            applyFilters();
+                        } catch (e) {
+                            console.error("Render error:", e);
+                            // Even if render fails, make sure we stop loading
+                        }
+                    }
+                }
+
+                // --- Search, Filter & Pagination Logic ---
+
+                function populateLanguageFilter(repos) {
+                    const languages = new Set();
+                    repos.forEach((repo) => {
+                        if (repo.language) languages.add(repo.language);
+                    });
+
+                    const $select = $("#language-filter");
+                    $select.find("option:not(:first)").remove();
+
+                    Array.from(languages)
+                        .sort()
+                        .forEach((lang) => {
+                            $select.append(
+                                `<option value="${lang}">${lang}</option>`,
+                            );
+                        });
+                }
+
+                function applyFilters() {
+                    const searchQuery = $("#search-input").val().toLowerCase();
+                    const langFilter = $("#language-filter").val();
+
+                    filteredRepos = allFetchedRepos.filter((repo) => {
+                        const matchesSearch =
+                            repo.name.toLowerCase().includes(searchQuery) ||
+                            (repo.description &&
+                                repo.description
+                                    .toLowerCase()
+                                    .includes(searchQuery));
+                        const matchesLang =
+                            langFilter === "All" ||
+                            repo.language === langFilter;
+                        return matchesSearch && matchesLang;
+                    });
+
+                    currentPage = 1;
+                    renderCurrentPage();
+                }
+
+                function renderCurrentPage() {
+                    const $grid = $("#projects-grid");
+                    const $countLabel = $("#repo-count");
+                    const $errorMsg = $("#error-message");
+                    const $pagination = $("#pagination");
+
+                    $grid.empty();
+
+                    if (filteredRepos.length === 0) {
+                        $errorMsg.removeClass("hidden");
+                        $pagination.addClass("hidden");
+                        $countLabel.text(`0 Projects found`);
+                        return;
+                    } else {
+                        $errorMsg.addClass("hidden");
+                    }
+
+                    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+                    const endIndex = startIndex + ITEMS_PER_PAGE;
+                    const pageItems = filteredRepos.slice(startIndex, endIndex);
+
+                    $countLabel.text(`${filteredRepos.length} Projects`);
+
+                    pageItems.forEach((repo) => {
+                        // Determine Language Color
+                        let langColor = "#cbd5e1";
+                        if (repo.language && languageColors[repo.language]) {
+                            langColor =
+                                languageColors[repo.language].color ||
+                                "#cbd5e1";
+                        }
+
+                        const description =
+                            repo.description || "No description provided.";
+                        const truncatedDesc =
+                            description.length > 100
+                                ? description.substring(0, 100) + "..."
+                                : description;
+
+                        const cardHTML = `
+                        <div class="project-card bg-white dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 rounded-2xl flex flex-col h-full shadow-lg hover:shadow-2xl hover:border-brand-500/50 dark:hover:border-brand-500/50 transition-all duration-300 group relative overflow-hidden">
+
+                            <!-- Thumbnail -->
+                            <div class="relative h-48 w-full overflow-hidden border-b border-slate-100 dark:border-neutral-800 bg-slate-100 dark:bg-neutral-800">
+                                <img
+                                    src="https://opengraph.githubassets.com/1/${repo.owner.login}/${repo.name}"
+                                    alt="${repo.name}"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    loading="lazy"
+                                    onerror="this.style.display='none'"
+                                />
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="p-6 flex flex-col flex-grow relative z-10">
+                                <div class="absolute inset-0 bg-gradient-to-br from-transparent to-slate-50 dark:to-neutral-800/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+                                <div class="relative z-10 flex flex-col h-full">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div class="p-2 bg-slate-100 dark:bg-neutral-800 rounded-lg text-brand-600 dark:text-brand-400 group-hover:scale-110 transition-transform duration-300">
+                                            <i data-lucide="folder-git-2" class="w-5 h-5"></i>
+                                        </div>
+                                        <div class="flex gap-2">
+                                            ${
+                                                repo.homepage
+                                                    ? `
+                                                <a href="${repo.homepage}" target="_blank" title="Live Demo" class="p-2 text-slate-500 hover:text-brand-500 dark:text-neutral-400 dark:hover:text-brand-400 transition-colors">
+                                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                                </a>
+                                            `
+                                                    : ""
+                                            }
+                                            <a href="${repo.html_url}" target="_blank" title="View Code" class="p-2 text-slate-500 hover:text-slate-900 dark:text-neutral-400 dark:hover:text-white transition-colors">
+                                                <i data-lucide="github" class="w-5 h-5"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 truncate">
+                                        ${repo.name.replace(/-/g, " ")}
+                                    </h3>
+
+                                    <p class="text-slate-600 dark:text-neutral-400 text-sm mb-6 flex-grow leading-relaxed">
+                                        ${truncatedDesc}
+                                    </p>
+
+                                    <div class="flex items-center justify-between pt-4 mt-auto border-t border-slate-100 dark:border-neutral-800">
+                                        <div class="flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-neutral-400">
+                                            <span class="w-2 h-2 rounded-full" style="background-color: ${langColor}"></span>
+                                            ${repo.language || "Code"}
+                                        </div>
+                                        <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-neutral-400 font-mono">
+                                            <div class="flex items-center gap-1">
+                                                <i data-lucide="star" class="w-3 h-3"></i> ${repo.stargazers_count}
+                                            </div>
+                                            <div class="flex items-center gap-1">
+                                                <i data-lucide="git-fork" class="w-3 h-3"></i> ${repo.forks_count}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                        $grid.append(cardHTML);
+                    });
+
+                    updatePaginationControls(filteredRepos.length);
+                    if (typeof lucide !== "undefined") lucide.createIcons();
+                    initAnimations();
+                }
+
+                function updatePaginationControls(totalItems) {
+                    const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+                    const $pagination = $("#pagination");
+
+                    if (totalPages <= 1) {
+                        $pagination.addClass("hidden");
+                    } else {
+                        $pagination.removeClass("hidden");
+                        $("#page-indicator").text(
+                            `Page ${currentPage} of ${totalPages}`,
+                        );
+                        $("#prev-btn").prop("disabled", currentPage === 1);
+                        $("#next-btn").prop(
+                            "disabled",
+                            currentPage === totalPages,
+                        );
+                    }
+                }
+
+                $("#search-input").on("input", applyFilters);
+                $("#language-filter").on("change", applyFilters);
+
+                $("#prev-btn").on("click", function () {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderCurrentPage();
+                        $("html, body").animate(
+                            {
+                                scrollTop:
+                                    $("#projects-grid").offset().top - 150,
+                            },
+                            "smooth",
+                        );
+                    }
+                });
+
+                $("#next-btn").on("click", function () {
+                    const totalPages = Math.ceil(
+                        filteredRepos.length / ITEMS_PER_PAGE,
+                    );
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        renderCurrentPage();
+                        $("html, body").animate(
+                            {
+                                scrollTop:
+                                    $("#projects-grid").offset().top - 150,
+                            },
+                            "smooth",
+                        );
+                    }
+                });
+
+                function initAnimations() {
+                    if (typeof gsap === "undefined") return;
+                    gsap.fromTo(
+                        ".project-card",
+                        { opacity: 0, y: 40 },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.6,
+                            stagger: 0.05,
+                            ease: "back.out(1.7)",
+                            clearProps: "all",
+                        },
+                    );
+
+                    $(".project-card").each(function () {
+                        const card = this;
+                        $(card)
+                            .on("mouseenter", () => {
+                                if (typeof anime !== "undefined") {
+                                    anime({
+                                        targets: card,
+                                        scale: 1.02,
+                                        duration: 300,
+                                        easing: "easeOutQuad",
+                                    });
+                                }
+                            })
+                            .on("mouseleave", () => {
+                                if (typeof anime !== "undefined") {
+                                    anime({
+                                        targets: card,
+                                        scale: 1,
+                                        duration: 300,
+                                        easing: "easeOutQuad",
+                                    });
+                                }
+                            });
+                    });
+                }
+
+                // Start process
+                initData();
+            });
+        </script>
+    </body>
+</html>
