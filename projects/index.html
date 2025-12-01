@@ -18,14 +18,14 @@
         <meta name="robots" content="index, follow" />
         <link
             rel="canonical"
-            href="https://muhammad-fiaz.github.io/projects/"
+            href="https://muhammad-fiaz.github.io/Projects/"
         />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
         <meta
             property="og:url"
-            content="https://muhammad-fiaz.github.io/projects/"
+            content="https://muhammad-fiaz.github.io/Projects/"
         />
         <meta
             property="og:title"
@@ -44,7 +44,7 @@
         <meta property="twitter:card" content="summary_large_image" />
         <meta
             property="twitter:url"
-            content="https://muhammad-fiaz.github.io/projects/"
+            content="https://muhammad-fiaz.github.io/Projects/"
         />
         <meta property="twitter:title" content="Projects | Muhammad Fiaz" />
         <meta
@@ -93,6 +93,7 @@
 
         <!-- Tailwind CSS -->
         <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="styles.css">
         <script>
             tailwind.config = {
                 darkMode: "class",
@@ -254,6 +255,7 @@
                 <a
                     href="https://muhammadfiaz.com"
                     class="flex items-center space-x-3 rtl:space-x-reverse group"
+                    rel="noopener noreferrer"
                 >
                     <div
                         class="p-2 bg-brand-500 rounded-lg text-white group-hover:scale-105 transition-transform"
@@ -272,6 +274,7 @@
                         target="_blank"
                         class="text-slate-500 hover:text-slate-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
                         aria-label="GitHub Profile"
+                        rel="noopener noreferrer"
                     >
                         <i data-lucide="github" class="w-5 h-5"></i>
                     </a>
@@ -297,27 +300,7 @@
                 aria-hidden="true"
             >
                 <div
-                    class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#0ea5e9] to-[#8b5cf6] opacity-30"
-                    style="
-                        clip-path: polygon(
-                            74.1% 44.1%,
-                            100% 61.6%,
-                            97.5% 26.9%,
-                            85.5% 0.1%,
-                            80.7% 2%,
-                            72.5% 32.5%,
-                            60.2% 62.4%,
-                            52.4% 68.1%,
-                            47.5% 58.3%,
-                            45.2% 34.5%,
-                            27.5% 76.7%,
-                            0.1% 64.9%,
-                            17.9% 100%,
-                            27.6% 76.8%,
-                            76.1% 97.7%,
-                            74.1% 44.1%
-                        );
-                    "
+                    class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#0ea5e9] to-[#8b5cf6] opacity-30 hero-gradient"
                 ></div>
             </div>
 
@@ -381,6 +364,7 @@
                         <select
                             id="language-filter"
                             class="bg-white dark:bg-black border border-slate-200 dark:border-neutral-800 text-slate-900 dark:text-white text-sm rounded-lg focus:ring-brand-500 focus:border-brand-500 block w-full pl-10 p-2.5 cursor-pointer transition-colors appearance-none"
+                            aria-label="Filter projects by programming language"
                         >
                             <option value="All">All Languages</option>
                             <!-- Options populated dynamically -->
@@ -460,11 +444,13 @@
                     <a
                         href="https://muhammadfiaz.com"
                         class="text-slate-500 hover:text-brand-500 transition-colors text-sm"
+                        rel="noopener noreferrer"
                         >Portfolio</a
                     >
                     <a
                         href="https://github.com/muhammad-fiaz"
                         class="text-slate-500 hover:text-brand-500 transition-colors text-sm"
+                        rel="noopener noreferrer"
                         >GitHub</a
                     >
                 </div>
