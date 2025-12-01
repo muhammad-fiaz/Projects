@@ -1,4 +1,4 @@
-# Deploy the /projects folder to GitHub Pages
+# Deploy the root folder to GitHub Pages
 name: Deploy Projects folder to GitHub Pages
 
 on:
@@ -30,10 +30,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload Projects folder
+      - name: Upload root folder
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './projects'  # ONLY deploy /projects folder
+          path: './'  # Deploy root folder
 
       - name: Deploy to GitHub Pages
         id: deployment
