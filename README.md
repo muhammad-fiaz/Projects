@@ -1,5 +1,7 @@
 # Projects
 
+> Note: usage of this site is moved to https://github.com/muhammad-fiaz/muhammad-fiaz.github.io
+
 A modern, responsive project showcase page built with HTML, TailwindCSS, GSAP, and Anime.js.
 
 ## 🚀 Deployment
